@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>셀 이동</title>
+        <style>
+            td{
+                width:50px;
+                height:50px;
+                border:1px solid orchid;
+            }
+        </style>
+        <script>
+            let tds;
+            let idx=0, previdx=0;
+            window.onload=function(){
+                tds=document.getElementsByTagName("td");
+                tds[idx].style.background="orchid";
+            }
+            window.onkeydown=function(e){
+                switch(e.key){
+                    case "ArrowDown":
+                        if(idx/3==2) return;
+                        idx+=3;
+                        break;
+                    case "ArrowLeft":
+                        if(idx==0) return;
+                        idx--;
+                        break;
+                    case "ArrowRight":
+                        if(idx==8) return;
+                        idx++;
+                        break;
+                    case "ArrowUp":
+                        if(idx/3==0) return;
+                        idx-=3;
+                        break;
+                }
+                tds[idx].style.background="magenta";
+                tds[previdx].style.background="white";
+                previdx=idx;
+            }
+        </script>
+    </head>
+    <body> 
+        <table>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+    </body>
+</html>
