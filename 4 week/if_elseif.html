@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>if-else if</title>
+    </head>
+    <body>
+        <h3>if-else if를 통한 학점 매기기</h3>
+        <hr>
+        <script>
+            let grade;
+            let check=false;
+            while(1){
+                let name=prompt("너의 이름을 입력하시오" ,"");
+                check=confirm(name + "가 당신의 이름이 맞습니까?");
+                if(check) break;
+            }
+            let ret=prompt(name + "의 점수를 입력하시오 : ", "");
+            ret=parseInt(ret);
+            if(ret>=90) grade='A';
+            else if(ret>=80) grade='B';
+            else if(ret>=70) grade='C';
+            else if(ret>=60) grade='D';
+            else grade='E';
+            document.write("당신의 성적은 " + grade + "<br>");
+        </script>
+    </body>
+</html>

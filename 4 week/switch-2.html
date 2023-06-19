@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>switch upgrade</title>
+    </head>
+    <body>
+        <script>
+            let a=prompt("무슨 커피를 드릴까요?", "");
+            switch(a){
+                case "에스프레소":
+                    price=200; break;
+                case "카푸치노":
+                    price=300; break;
+                case "바니라라떼":
+                    price=600; break;
+                case "카페라떼":
+                    price=800; break;
+                default:
+                    document.write("그런 커피는 팔지 않습니다<br>");
+                    break;
+            }
+            document.write(a + "는 " + price + "입니다.<br>");
+        </script>
+    </body>
+</html>
