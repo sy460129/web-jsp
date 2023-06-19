@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>setTimeout()으로 웹 페이지 자동 연결</title>
+        <script>
+            let timerId=null;
+            function startTimer(time){
+                timerId=setTimeout("load('http://www.naver.com')",time);
+                document.getElementById("img").title="타이머 작동 시작...";
+            }
+            function cancelTimer(){
+                if(timerId!=null){
+                    clearTimeout(timerId);
+                }
+            }
+            function load(url){
+                window.location=url;
+            }
+        </script>
+    </head>
+    <body> 
+        <h3>이미지에 마우스를 올리고 3초간 그대로 있을 때 사이트로 이동합니다</h3>
+        <hr>
+        <img id="img", src="media/나몰빼미.jpg" width="100" height="100"
+        onmouseover="startTimer(3000)"
+        onmouseout="cancelTimer()">
+    </body>
+</html>
