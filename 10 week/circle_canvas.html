@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>원 그리기</title>
+        <script>
+            
+        </script>
+    </head>
+    <body> 
+        <h3>원 그리기</h3>
+        <hr>
+        <canvas id="canvas" width="300" height="300"></canvas>
+        <script>
+            let canvas=document.getElementById("canvas");
+            let ctx=canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.strokeStyle="magenta";
+            ctx.arc(100, 70, 30, 0, 1.5*Math.PI, false);
+            ctx.stroke();
+            // 중심좌표 (100, 70)
+            // 반지름 30
+            // 시작위치 0
+            // 그리는 범위 1.5 파이
+            // false == 시계방향
+
+            ctx.beginPath();
+	        ctx.strokeStyle="blue";
+	        ctx.arc(100, 70, 50, Math.PI/2, Math.PI, true);
+	        ctx.stroke();
+            // 중심좌표 (100, 70)
+            // 반지름 50
+            // 시작위치 파이 / 2
+            // 그리는 범위 1.5 파이
+            // false == 시계방향
+
+        </script>
+    </body>
+</html>

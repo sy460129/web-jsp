@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>사각형 그리기</title>
+        <script>
+            function erase(){
+                let canvas=document.getElementById("canvas");
+                let ctx=canvas.getContext("2d");
+
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                ctx.beginPath();
+            }
+        </script>
+    </head>
+    <body> 
+        <h3>사각형 그리기</h3>
+        <hr>
+        <canvas id="canvas" width="300" height="300"></canvas>
+        
+    </body>
+</html>

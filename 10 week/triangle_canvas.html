@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>선으로 삼각형 그리기</title>
+        <script>
+            
+        </script>
+    </head>
+    <body> 
+        <h3>선으로 삼각형 그리기</h3>
+        <hr>
+        <canvas id="canvas" width="300" height="300"></canvas>
+        <script>
+            let canvas=document.getElementById("canvas");
+            let ctx=canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.moveTo(120,20);
+            ctx.lineTo(20,50);
+            ctx.lineTo(150,120);
+            ctx.closePath();
+            ctx.strokeStyle="blue";
+            ctx.fillStyle="violet";
+            ctx.fill();
+            ctx.stroke();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>캔버스에 글씨 쓰기</title>
+        <script>
+            
+        </script>
+    </head>
+    <body> 
+        <h3>캔버스에 글씨 쓰기</h3>
+        <hr>
+        <canvas id="canvas" width="300" height="300"></canvas>
+        <script>
+            let canvas=document.getElementById("canvas");
+            let ctx=canvas.getContext("2d");
+
+            ctx.font="20px Gothic";
+            ctx.fillStyle="green";
+            ctx.fillText("TEXT", 150, 50);
+        </script>
+    </body>
+</html>
