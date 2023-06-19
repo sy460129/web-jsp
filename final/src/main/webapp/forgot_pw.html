@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>12201731_박승연</title>
+        <style>
+            body {
+              font-family: Consolas, sans-serif;
+            }
+            .nav{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px;
+            }
+            .nav a{
+              text-decoration: none;
+              color: black;
+              font-size:30px;
+              margin-right:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <div>
+                <a href="index.html" title="home">Home</a>
+                <a href="javascript:alert('로그인을 하세요!')" title="게시판">Community</a>
+                <a href="javascript:alert('로그인을 하세요!')" title="게임">Game</a>
+                <a href="javascript:alert('로그인을 하세요!')" title="랭킹">Ranking</a>
+            </div>
+            <div>
+                <a href="login.html" style="font-size:20px" title="로그인">Login</a>
+                <a href="register.jsp" style="font-size:20px" title="회원가입">Register</a>
+            </div>
+        </div>
+
+        <fieldset style="width:230px; height:80px" >
+            <legend>비밀번호 찾기</legend>
+             <form action="find_pw.jsp" method="post">
+                <table>
+                    <tr>
+                        <td>ID : </td>
+                        <td><input type="text" name="userID"></td>
+                    </tr>
+                </table>                    
+                <div style="text-align:right; margin-right:20px">
+                	<input type="submit" value="찾기">
+                </div>
+            </form>
+        </fieldset>
+    </body>
+</html>
