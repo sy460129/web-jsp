@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Math를 이용한 구구단</title>
+        <script>
+            function randomInt(){
+                return Math.floor(Math.random()*9)+1;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Math를 이용한 구구단</h3>
+        <hr>
+        <script>
+            let ans=0, fal=0;
+            while(1){
+                let question=randomInt() + "*" + randomInt();
+                let user=prompt(question + "값은 ?", "");
+                if(user==null || ans+fal==10) break; // 취소
+                else if(user==eval(question)) ans++;
+                else fal++;
+            }
+            document.write("정답 개수 : " + ans + "<br>" + "오답 개수 : " + fal + "<br>");
+        </script>
+    </body>
+</html>

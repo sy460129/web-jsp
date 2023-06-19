@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>object 객체</title>
+        <script>
+            function inquiry(){
+                return this.balance;
+            }
+            function deposit(money){
+                this.balance+=money;
+            }
+            function withdraw(money){
+                this.balance-=money;
+                return money;
+            }
+            let account=new Object();
+            account.owner="sy46";
+            account.code="12201731";
+            account.balance=50000;
+            account.inquiry=inquiry;
+            account.deposit=deposit;
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write("account : ");
+        	document.write(account.owner + ", ");
+	        document.write(account.code + ", ");
+        	document.write(account.balance + "<br>");
+
+	        account.deposit(10000); // 10000원 저금
+        	document.write("10000원 저금 후 잔액은 " + account.inquiry() + "<br>");
+        	account.withdraw(5000); // 5000원 인출
+        	document.write("5000원 인출 후 잔액은 " + account.inquiry() + "<br>");
+        </script>
+    </body>
+</html>

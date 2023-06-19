@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>array 객체의 메소드 활용</title>
+        <script>
+            function pr(msg, arr) {
+                document.write(msg+arr.toString()+"<br>");
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Array 객체의 메소드 활용</h3>
+        <hr>
+        <script>
+            let a=new Array(1, 5, 13, 32, 56, 44);
+            let b=new Array(27, 8);
+            let c;
+            pr("배열 a = ", a);
+            pr("배열 b = ", b);
+            document.write("<hr>");
+
+            c=a.concat(b);
+            pr("c = a.concat(b) 후 c = ", c);
+            pr("c = a.concat(b) 후 a = ", a); // a는 변화 없음
+            document.write("<hr>");
+
+            c=a.join(", ");
+            pr("c = a.join() 후 c = ", c);
+            pr("c = a.join() 후 a = ", a);
+            document.write("<hr>");
+
+            c=a.reverse();
+            pr("c = a.reverse() 후 c = ", c);
+            pr("c = a.reverse() 후 a = ", a); // a도 변화
+            document.write("<hr>");
+            
+            c=a.slice(1,2);
+            pr("c = a.slice() 후 c = ", c);
+            pr("c = a.slice() 후 a = ", a);
+            document.write("<hr>");
+
+            c=a.sort();
+            pr("c = a.sort() 후 c = ", c);
+            pr("c = a.sort() 후 a = ", a); // a도 변화
+            document.write("<hr>");
+
+            c=a.sort().reverse();
+            pr("c = a.sort().reverse() 후 c = ", c);
+            pr("c = a.sort().reverse() 후 a = ", a);
+            document.write("<hr>");
+        </script>
+    </body>
+</html>

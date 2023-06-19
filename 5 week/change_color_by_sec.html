@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>방문 시각에 따라 변하는 배경 색</title>
+    </head>
+    <body>
+        <h3>방문 초시간이 짝수면 파랑, 홀수면 분홍색</h3>
+        <script>
+            let t=new Date();
+            document.write("현재 시각 : " + t.toUTCString());
+            if(t.getSeconds()%2){
+                document.body.style.background="violet";
+            }
+            else document.body.style.background="skyblue";
+        </script>
+    </body>
+</html>

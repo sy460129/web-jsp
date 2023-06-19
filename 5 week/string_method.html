@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>string 객체 메소드 활용</title>
+    </head>
+    <body>
+        <h3>String 객체 메소드 활용</h3>
+        <hr>
+        <script>
+            let a="Boys and Girls";
+            let b="!!";
+            document.write(a + "<br>");
+            document.write(b + "<br>");
+            document.write("<hr>");
+
+            document.write("a.charAt() " + a.charAt(0) + "<br>");
+            document.write("a.concat(b) " + a.concat(b) + "<br>");
+            document.write("a.indexOf(s) " + a.indexOf("s") + "<br>");
+            document.write("a.indexOf(And) " + a.indexOf("And") + "<br>");
+            document.write("a.slice(5,8) " + a.slice(5,8) + "<br>");
+            document.write("a.substr(5,3) " + a.substr(5,3) + "<br>");
+            document.write("a.toUpperCase() " + a.toUpperCase() + "<br>");
+            document.write("a.replace('and', 'or') " + a.replace("and", "or") + "<br>");
+            document.write("trim " + "    kkitae      ".trim() + "<hr>");
+            
+            let sub=a.split(" ");
+            document.write("a를 빈칸으로 분리<br>");
+            for(let i=0; i<sub.length; i++){
+                document.write("sub" + i + " = " + sub[i] + "<br>");
+            }
+            document.write("<hr>");
+            document.write("a 상태 변화 " + a + "<br>");
+            document.write("b 상태 변화 " + b);
+        </script>
+    </body>
+</html>
