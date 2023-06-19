@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>oncontextmenu</title>
+    </head>
+    
+    <script>
+        function changeImage(){
+            let s=document.getElementById("sel");
+            let image=document.getElementById("myImg");
+            image.onload=function(){
+                let mySpan=document.getElementById("mySpan");
+                mySpan.innerHTML=image.width+"X"+image.height;
+            }
+            let index=s.selectedIndex;
+            image.src=s.options[index].value;
+        }
+    </script>
+    <body onload="changeImage()">
+        <h3>onContextMenu</h3>
+        <hr>
+        <form>
+            <select id="sel" onchange="changeImage()">
+                <option value="media/나몰빼미.jpg">나몰빼미</option>
+                <option value="media/이로치 폴리곤.jpg">폴리곤</option>
+                <option value="media/spade-A.png">spade-A</option>
+            </select>
+            <span id="mySpan">이미지 크기</span>
+        </form>
+        <p><img id="myImg" src="media/나몰빼미.jpg"></p>
+    </body>
+</html>

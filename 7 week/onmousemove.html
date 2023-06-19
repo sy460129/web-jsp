@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>마우스 이벤트 객체의 프로퍼티</title>
+    </head>
+    <Style>
+        div{
+            background:skyblue;
+            width:250px;
+        }
+    </Style>
+    <script>
+        function where(e){
+            let p=document.getElementById("d");
+            let text="버튼"+e.button+"<br>";
+            text+="(screenX, screenY)="+e.screenX+","+e.screenY+"<br>";
+            text+="(clientX,clientY)="+e.clientX+","+e.clientY+"<br>";
+            text+="(offsetX,offsetY)="+e.offsetX+","+e.offsetY+"<br>";
+            text+="(x,y)="+e.x+","+e.y+"\n";
+            p.innerHTML=text;
+        }
+    </script>
+    <body>
+        <h3>마우스 이벤트 객체의 프로퍼티</h3>
+        <hr>
+        <img src="media/나몰빼미.jpg" width="300" height="300" onmousemove="where(event)"><br><br>
+        <div id="d"></div>
+    </body>
+</html>

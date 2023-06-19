@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>onclick 계산기 만들기</title>
+        <script>
+            function show(obj){
+                let input=document.getElementById("in");
+                input.value+=obj.value;
+            }
+            function calculate(){
+                let input=document.getElementById("in");
+                let answer=document.getElementById("ans");
+                answer.value=eval(input.value);
+            }
+            function clear(){
+                let input=document.getElementById("in");
+                let answer=document.getElementById("ans");
+                input.value=null;
+                ans.value=null;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>onclick 계산기 만들기</h3>
+        <hr>
+        <p>계산하고자 하는 수식을 입력하고 계산 버튼을 누르세요.</p>
+        식
+        <input id="in" type="text" size="15"><br>
+        값
+        <input type="text" id="ans" size="15">
+        <table style="text-align:center">
+            <tr>
+                <td><input type="button" value="1" onclick="show(this)"></td>
+                <td><input type="button" value="2" onclick="show(this)"></td>
+                <td><input type="button" value="3" onclick="show(this)"></td>
+                <td><input type="button" value="+" onclick="show(this)"></td>
+            </tr>
+            <tr>                
+                <td><input type="button" value="4" onclick="show(this)"></td>
+                <td><input type="button" value="5" onclick="show(this)"></td>
+                <td><input type="button" value="6" onclick="show(this)"></td>
+                <td><input type="button" value="-" onclick="show(this)"></td>
+            </tr>
+            <tr>                
+                <td><input type="button" value="7" onclick="show(this)"></td>
+                <td><input type="button" value="8" onclick="show(this)"></td>
+                <td><input type="button" value="9" onclick="show(this)"></td>
+                <td><input type="button" value="/" onclick="show(this)"></td>
+            </tr>
+            <tr>                
+                <td><input type="button" value="0" onclick="show(this)"></td>
+                <td><input type="button" value="00" onclick="show(this)"></td>
+                <td><input type="button" value="C" onclick="clear()"></td>
+                <td><input type="button" value="*" onclick="show(this)"></td>
+            </tr>
+        </table>
+        <button onclick="calculate()">계산</button>
+    </body>
+</html>
