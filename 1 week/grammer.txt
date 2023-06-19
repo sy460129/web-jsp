@@ -1,0 +1,155 @@
+<br> 태그
+    </br>없이 사용
+    문장 줄바꿈
+
+<h1 title="마우스 커서 올리면 보임">
+    태그 시작을 이렇게 시작
+    끝은 똑같이 </h1>
+
+<p> 태그
+    문단 나눌 때 사용
+
+<hr> 태그
+    수평선을 그을 때 사용
+    엔드 태그 (/hr) 존재 X 
+
+<pre> 태그
+    안에 들어있는 스페이스 바, 엔터 등을
+    모두 반영하여 출력
+    (그대로 출력하기)
+
+<b> 태그
+    진하게 출력
+
+<strong> 태그
+    중요한 것을 강조하도록 출력
+    <b> 태그와 큰 차이는 없으나
+    보통 <b> 태그를 사용
+
+<em> 태그
+    강조하는 태그
+
+<i> 태그
+    이탤릭으로 강조
+    <em> 태그와 큰 차이는 없음
+
+<b><i> 이렇게 중복 사용 가능
+-> 진하게 이탤릭체로 출력
+
+<small> 태그
+    기존 글자 크기보다 한 단계 작은 크기로 출력
+
+<del> 태그
+    삭제하는 태그
+    가운데에 바를 그어줌
+
+<ins> 태그
+    추가하는 태그
+    아래에 언더바를 그어줌
+
+<sup> 태그
+    윗첨자로 출력
+
+<sub> 태그
+    아랫첨자로 출력
+
+<mark> 태그
+    하이라이팅 (형광팬)으로 출력
+
+블록 태그 : <p>, <hl>, <div>, <ul>
+인라인 태그 : <strong>, <a>, <img>, <span>
+
+<span style="color:red"> 사랑</span>
+이렇게 사용하고, 사랑 이란 단어를 빨갛게 보여줌
+
+<base> 태그
+    <a href="http://www.mysite.com/score/math.html> 수학</a>
+    <a href="http://www.mysite.com/score/science.html> 과학</a>
+
+    ->
+    <base href="http://www.mysite.com/score/>
+    <a href="math.html> 수학</a>
+    <a href="science.html> 과학</a>
+
+<img src="이미지 파일의 URL"
+     alt="문자열"
+     width="이미지 폭"
+     height="이미지 높이">
+
+src : 이미지 파일의 URL. 필수 속성
+alt : 이미지가 없거나 손상되는 등 이미지를 출력할 수 없는 경우
+      출력되는 문자열. 필수 속성
+width : 이미지가 출력되는 너비로, 생략되면 원본 이미지의 폭. 픽셀 수
+height : 이미지가 출력되는 높이로, 생략되면 원본 이미지의 너비. 픽셀 수
+
+
+순서 있는 리스트 (ordered list) : <ol> </ol>
+순서 없는 리스트 (unordered list): <ul> </ul>
+정의 리스트 (definition list): <dl> </dl>
+
+리스트 아이템
+<li> ... </li>
+-> 엔드 태그 생략 가능
+
+<ol type="1"|"A"|"a"|"I"|"i"
+    start="value">
+    <li>아이템</li>
+    <li>아이템</li>
+</ol>
+
+type : 마커 종류, <ol> 태그에 대해서만 유효
+start : 마커의 시작 값
+
+<dl>
+    <dt> <strong> Internet Explorer</strong>
+    <dd> 마이크로소프트에서 만든 브라우저로
+         현재 국내 시장에서 가장 많이 사용
+    <dt> <strong> Firefox</strong>
+    <dd> Mozilla 재단에서 오픈 소스로 만든
+         것으로 W3C의 웹 표준을 선도
+        
+    -> <dt> : definition term, 용어의 제목
+       <dd> : definition description, 용어 설명
+</dl>
+
+표를 만드는데 사용되는 태그
+<table> : 표 전체를 담는 컨테이너
+<caption> : 표 제목
+<thead> : 헤딩 셀 그룹
+<tfoot> : 바닥 셀 그룹
+<tbody> : 데이터 셀 그룹
+<tr> : 행, 여러 <td>, <th>포함
+<th> : 열 제목 (헤딩) 셀
+<td> : 데이터 셀
+
+ex)
+<table border="1"> <-- border 무시 가능 -->
+    <thead>
+        <tr> <th> 이름</th> <th> HTML</th> <th> CSS</th> </tr>
+    </thead>
+    <tfoot>
+        <tr> <th> 합</th> <th> 225</th> <th> 230</th> </tr>
+    </tfoot>
+    <tbody>
+        <tr> <td> 황기태</td> <td> 80</td> <td> 70</td> </tr>
+        <tr> ... </tr>
+    </tbody>
+</table>
+
+하이퍼링크 <a> (앵커 태그)
+<a href="URL"|"URL#앵커이름"|"#앵커이름"
+    target="윈도우이름"> (새 창을 띄울 것인지, 현재 창에 띄울 것인지 등)
+    텍스트 혹은 이미지
+</a>
+
+같은 웹 사이트에 있는 웹 페이지 연결
+<a href="picturepage.html"> 클릭하면 사진 페이지로 이동합니다.</a>
+
+다른 웹 사이트의 웹 페이지 연결
+<a href="http://www.naver.com">네이버</a>
+<a href="http://www.siter.com/login.html>사이트 로그인</a>
+
+이미지 하이퍼링크 만들기
+<a href="http://www.naver.com>
+    <img src="naver.png alt="네이버 사이트>
+</a>
